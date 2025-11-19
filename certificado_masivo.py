@@ -5,7 +5,7 @@ import os
 # CONFIGURACIÓN
 archivo_excel = "datos.xlsx"      # Nombre de tu archivo Excel
 archivo_plantilla = "template.pdf" # Nombre de tu PDF rellenable
-campo_pdf = "Nombre, apellido y DNI" # El nombre exacto del campo en el PDF
+campo_pdf = "Nombre y DNI" # El nombre exacto del campo en el PDF
 carpeta_salida = "certificados_generados"
 
 # Crear la carpeta de salida si no existe
@@ -37,13 +37,13 @@ for index, row in df.iterrows():
     print(f"Procesando: {texto_combinado}")
 
     # 4. Cargamos el formulario (debe hacerse dentro del bucle para tener una copia limpia cada vez)
-    formulario = PdfWrapper(archivo_plantilla)
+    formulario = PdfWrapper(archivo_plantilla)    
 
     # 5. Rellenamos los datos
     datos_a_rellenar = {
         campo_pdf: texto_combinado
     }
-    formulario.fill(datos_a_rellenar)
+    formulario.fill(datos_a_rellenar, flatten=True)       
 
     # 6. Guardamos el archivo individual
     # Generamos un nombre único, por ejemplo usando el DNI
