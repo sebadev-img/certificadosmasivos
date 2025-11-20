@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{Subject}}</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-family: "Inter", sans-serif; /* Using Inter as per instructions, with a fallback */
+        background-color: #f4f4f4;
+        color: #333333;
+      }
+
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 0;
+      }
+
+      img {
+        border: 0;
+        -ms-interpolation-mode: bicubic;
+      }
+
+      a {
+        text-decoration: none;
+        color: #007bff; /* Default link color */
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px; /* Rounded corners for the main container */
+        overflow: hidden; /* Ensures rounded corners are applied correctly */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .header {
+        /*background-color: #007bff;*/
+        /*padding: 20px;*/
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .header img {
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove extra space below image */
+        margin: 0 auto 10px auto; /* Center image and add some bottom margin */
+        border-radius: 4px; /* Slightly rounded corners for the image */
+      }
+
+      .header h1 {
+        color: #ffffff;
+        margin: 0;
+        font-size: 28px;
+      }
+
+      .content {
+        padding: 30px;
+        line-height: 1.6;
+      }
+
+      .content p {
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      .button-container {
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .button {
+        display: inline-block;
+        background-color: #28a745; /* Green call to action button */
+        padding: 12px 25px;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        transition: background-color 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #218838;
+      }
+
+      .footer {
+        background-color: #f8f9fa;
+        padding: 20px;
+        text-align: center;
+        font-size: 12px;
+        color: #6c757d;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+
+      .footer img {
+        /* Styling for the image within the footer */
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove extra space below image */
+        margin: 0 auto 10px auto; /* Center image and add some bottom margin */
+        border-radius: 4px; /* Slightly rounded corners for the image */
+      }
+
+      /* Responsive styles */
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+          border-radius: 0 !important; /* No rounded corners on small screens for full width */
+        }
+
+        .header h1 {
+          font-size: 24px !important;
+        }
+
+        .content,
+        .header,
+        .footer {
+          padding: 20px !important;
+        }
+
+        .button {
+          padding: 10px 20px !important;
+          font-size: 16px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table
+      width="100%"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      style="background-color: #f4f4f4"
+    >
+      <tr>
+        <td align="center" style="padding: 20px 0">
+          <table
+            class="container"
+            width="100%"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            style="max-width: 600px"
+          >
+            <tr>
+              <td class="header">
+                <img
+                  src="https://api-email.tierradelfuego.edu.ar/img/banner.png"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="content">
+                <p>Hola {{nombre}} {{apellido}},</p>
+                <p>Te adjuntamos el Certificado del Congreso Docente 2025.</p>
+                <p>
+                  Ante cualquier duda o consulta, podés escribirnos a
+                  ponencias8congreso@tdf.edu.ar
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="footer">
+                <img
+                  src="https://api-email.tierradelfuego.edu.ar/img/logo.png"
+                  style="
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    margin: 0 auto 10px auto;
+                    border-radius: 4px;
+                  "
+                />
+                <p>
+                  &copy; {{CurrentYear}} Desarrollado por la Direccion
+                  Provincial de Sistemas Administrativos.
+                </p>
+                <p>
+                  Este es un correo automático. Por favor, no respondas a este
+                  mensaje.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
